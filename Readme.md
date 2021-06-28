@@ -10,8 +10,8 @@ User [docker-desktop](https://www.docker.com/products/docker-desktop) to install
 ##Setup and Usage
 
 ```logstash 
- *  Update logstash_pipeline/logstash.conf [ifconfig:en0:inet"ip address"] to the machine ip address. for mac ifconfig > en0 > inet > 
- search for ip your ip address (format 192.x.x.x)
+ *  Update logstash_pipeline/logstash.conf [ifconfig:en0:inet"ip address"] to the machine ip address. for mac ipconfig getifaddr en0 
+copy the ip address
  * increase docker desktop resources (my settings Memory : 12GB; Swap 3GB)
  * docker-compose -f src/main/resources/selftut-elk.yml up -d  
  * docker-compose -f src/main/resources/selftut-kafka.yml up -d  
